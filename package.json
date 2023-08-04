@@ -15,13 +15,34 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**.{js,jsx} --fix"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "airbnb"
+    ],
+    "rules": {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "react/jsx-indent": [
+        1,
+        "tab"
+      ],
+      "react/jsx-indent-props": [
+        1,
+        "tab"
+      ],
+      "no-tabs": "off",
+      "react/prop-types": "off",
+      "import/prefer-default-export": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -34,5 +55,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
   }
 }
