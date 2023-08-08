@@ -8,6 +8,7 @@ function Header() {
 		<div className={styles.header}>
 			<img className={styles.babyImg} src={babyImg} alt="Сына-корзина" />
 			<img className={styles.formIcon} src={formIcon} alt="Вам пришло новое сообщение" />
+			<div className={styles.semiCircle} />
 			<Form />
 		</div>
 	);
