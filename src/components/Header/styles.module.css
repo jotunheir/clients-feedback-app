@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.babyImg {
+    position: relative;
+}
+
+.formIcon {
+    position: absolute;
+    z-index: 2;
+    top: 436px;
+    left: 538px;
+}
+

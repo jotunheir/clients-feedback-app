@@ -2,6 +2,7 @@
   "name": "clients-feedback-app",
   "version": "0.1.0",
   "private": true,
+  "main": "index.jsx",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -41,7 +42,8 @@
       ],
       "no-tabs": "off",
       "react/prop-types": "off",
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "jsx-a11y/label-has-associated-control": "off"
     }
   },
   "browserslist": {
