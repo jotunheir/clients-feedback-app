@@ -2,10 +2,13 @@
     display: flex;
     position: relative;
     overflow: hidden;
+    min-height: 650px;
 }
 
 .babyImg {
     position: relative;
+    width: 50%;
+    height: auto;
 }
 
 .formIcon {

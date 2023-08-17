@@ -1,0 +1,35 @@
+.rules {
+    color: var(--dark, #090F24);
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.703px;
+    letter-spacing: -0.364px;
+}
+
+.rulesCheckbox {
+    display: flex;
+    column-gap: 9px;
+}
+
+.checkboxLabelBold {
+    font-weight: 600;
+}
+
+.checkbox {
+    margin: 0;
+}
+
+.errorContainer {
+    height: 15px;
+}
+
+.errorActive {
+    display: flex;
+    align-items: flex-end;
+    color: red;
+    font-size: 10px;
+    height: 15px;
+    padding-left: 21.5px;
+}
