@@ -52,32 +52,6 @@
     margin-top: 14px;
 }
 
-.formInput {
-    color: var(--gray-3, #B7B8C5);
-    font-family: Noto Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    width: 526px;
-    height: 42px;
-    padding-left: 20px;
-    box-sizing: border-box;
-    border-radius: 40px;
-    border: 1px solid var(--blue, #74CCD8);
-    background: var(--white, #FFF);
-    margin-bottom: 12px;
-}
-
-.formText {
-    resize: none;
-    min-height: 130px;
-    padding-top: 11.5px;
-    border-radius: 20px;
-    margin-bottom: 6px;
-}
-
 .requiredFields {
     color: #427781;
     font-family: Noto Sans;
@@ -85,27 +59,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18.603px;
-    margin: 0;
-}
-
-.rulesChecked {
-    color: var(--dark, #090F24);
-    font-family: Noto Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 21.703px;
-    letter-spacing: -0.364px;
-
-    display: flex;
-    column-gap: 9px;
-}
-
-.rulesCheckedBold {
-    font-weight: 600;
-}
-
-.checkbox {
     margin: 0;
 }
 
@@ -120,8 +73,6 @@
     border-radius: 30px;
     background: var(--blue, #74CCD8);
     box-shadow: 0px 2px 4px 0px rgba(51, 196, 223, 0.20);
-
-    margin-top: 14px;
 }
 
 .formButtonTitle {
@@ -133,4 +84,8 @@
     line-height: normal;
     
     margin: 0;
+}
+
+.invalid {
+    border: red;
 }
