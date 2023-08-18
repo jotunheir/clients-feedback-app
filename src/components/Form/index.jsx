@@ -5,7 +5,7 @@ import {
 } from '../../store/slices/formSlice';
 import validation from '../../store/slices/validation';
 import { validateField } from './utils';
-import { formFields } from './constants';
+import { FORM_FIELDS } from './constants';
 
 import FormInput from './FormInput';
 import FormCheckbox from './FormCheckbox';
@@ -78,7 +78,7 @@ function Form() {
 			<p className={styles.subtitle}>Отправьте нам сообщение и мы ответим в ближайшее время</p>
 			<form className={styles.form} onSubmit={handleSubmit} noValidate>
 				<FormInput
-					name={formFields.userName}
+					name={FORM_FIELDS.userName}
 					placeholder="Введите имя"
 					handleFieldChange={handleFieldChange}
 					handleFieldFocus={handleFieldFocus}
@@ -86,7 +86,7 @@ function Form() {
 					errorMessage="Имя должно содержать от 2 до 128 символов"
 				/>
 				<FormInput
-					name={formFields.phoneNumber}
+					name={FORM_FIELDS.phoneNumber}
 					placeholder="Введите номер телефона"
 					handleFieldChange={handleFieldChange}
 					handleFieldFocus={handleFieldFocus}
@@ -94,7 +94,7 @@ function Form() {
 					errorMessage="Неправильный формат номера телефона"
 				/>
 				<FormInput
-					name={formFields.email}
+					name={FORM_FIELDS.email}
 					placeholder="Введите электорнную почту"
 					handleFieldChange={handleFieldChange}
 					handleFieldFocus={handleFieldFocus}
@@ -102,7 +102,7 @@ function Form() {
 					errorMessage="Неправильный формат электронной почты"
 				/>
 				<FormInput
-					name={formFields.reviewText}
+					name={FORM_FIELDS.reviewText}
 					placeholder="Напишите ваш отзыв"
 					tagType="textarea"
 					handleFieldChange={handleFieldChange}
@@ -112,7 +112,7 @@ function Form() {
 				/>
 				<p className={styles.requiredFields}>*обязательные поля</p>
 				<FormCheckbox
-					name={formFields.agreeForPersonalDataProcessing}
+					name={FORM_FIELDS.agreeForPersonalDataProcessing}
 					handleFieldCheckbox={handleFieldCheckbox}
 					handleFieldFocus={handleFieldFocus}
 					errorMessage="Вам нужно согласиться с правилами"

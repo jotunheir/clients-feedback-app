@@ -4,7 +4,9 @@ import styles from './styles.module.css';
 function FormCheckbox({
 	name, handleFieldCheckbox, handleFieldFocus, errorMessage,
 }) {
-	const formState = useSelector((state) => state.form);
+	const agreeForPersonalDataProcessing = useSelector(
+		(state) => state.form.fields.agreeForPersonalDataProcessing,
+	);
 
 	return (
 		<div className={styles.rules}>
@@ -14,7 +16,7 @@ function FormCheckbox({
 					className={styles.checkbox}
 					name={name}
 					id="rules"
-					checked={formState.fields.agreeForPersonalDataProcessing.checked}
+					checked={agreeForPersonalDataProcessing.checked}
 					onChange={handleFieldCheckbox}
 					onFocus={handleFieldFocus}
 				/>
@@ -28,7 +30,7 @@ function FormCheckbox({
 				</label>
 			</div>
 
-			{(formState.fields.agreeForPersonalDataProcessing.isValid) ? (
+			{(agreeForPersonalDataProcessing.isValid) ? (
 				<div className={styles.errorContainer} />
 			) : (
 				<div className={styles.errorActive}>

@@ -1,4 +1,4 @@
-export const formFields = {
+export const FORM_FIELDS = {
 	userName: 'userName',
 	phoneNumber: 'phoneNumber',
 	email: 'email',
