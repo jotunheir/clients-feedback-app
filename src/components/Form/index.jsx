@@ -9,7 +9,20 @@ import { FORM_FIELDS } from './constants';
 
 import FormInput from './FormInput';
 import FormCheckbox from './FormCheckbox';
-import styles from './styles.module.css';
+
+import {
+	MainForm,
+	Header,
+	Logo,
+	Title,
+	Subtitle,
+	FormContainer,
+	RequiredFields,
+	FormButton,
+	FormButtonIcon,
+	FormButtonTitle,
+
+} from './styled';
 
 import logoIcon from './assets/logoImg.svg';
 import buttonIcon from './assets/buttonImg.svg';
@@ -70,13 +83,13 @@ function Form() {
 	};
 
 	return (
-		<div className={styles.mainForm}>
-			<div className={styles.header}>
-				<img className={styles.logoIcon} src={logoIcon} alt="Корзина без сына" />
-				<h2 className={styles.title}>Свяжитесь с нами</h2>
-			</div>
-			<p className={styles.subtitle}>Отправьте нам сообщение и мы ответим в ближайшее время</p>
-			<form className={styles.form} onSubmit={handleSubmit} noValidate>
+		<MainForm>
+			<Header>
+				<Logo src={logoIcon} alt="Корзина без сына" />
+				<Title>Свяжитесь с нами</Title>
+			</Header>
+			<Subtitle>Отправьте нам сообщение и мы ответим в ближайшее время</Subtitle>
+			<FormContainer onSubmit={handleSubmit}>
 				<FormInput
 					name={FORM_FIELDS.userName}
 					placeholder="Введите имя"
@@ -110,19 +123,19 @@ function Form() {
 					handleFieldBlur={handleFieldBlur}
 					errorMessage="Текст должен содержать от 5 до 1024 символов"
 				/>
-				<p className={styles.requiredFields}>*обязательные поля</p>
+				<RequiredFields>*обязательные поля</RequiredFields>
 				<FormCheckbox
 					name={FORM_FIELDS.agreeForPersonalDataProcessing}
 					handleFieldCheckbox={handleFieldCheckbox}
 					handleFieldFocus={handleFieldFocus}
 					errorMessage="Вам нужно согласиться с правилами"
 				/>
-				<button type="submit" className={styles.formButton}>
-					<img className={styles.buttonIcon} src={buttonIcon} alt="Самолет" />
-					<p className={styles.formButtonTitle}>Отправить сообщение</p>
-				</button>
-			</form>
-		</div>
+				<FormButton type="submit">
+					<FormButtonIcon src={buttonIcon} alt="Самолет" />
+					<FormButtonTitle>Отправить сообщение</FormButtonTitle>
+				</FormButton>
+			</FormContainer>
+		</MainForm>
 	);
 }
 
