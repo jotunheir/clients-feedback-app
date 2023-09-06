@@ -1,16 +1,22 @@
-import styles from './styles.module.css';
 import Form from '../Form';
 import babyImg from './assets/babyImg.png';
 import formIcon from './assets/formIcon.svg';
 
+import {
+	HeaderContainer,
+	BackgroundImage,
+	IconImage,
+	SemiCircle,
+} from './styled';
+
 function Header() {
 	return (
-		<div className={styles.header}>
-			<img className={styles.babyImg} src={babyImg} alt="Сына-корзина" />
-			<img className={styles.formIcon} src={formIcon} alt="Вам пришло новое сообщение" />
-			<div className={styles.semiCircle} />
+		<HeaderContainer>
+			<BackgroundImage src={babyImg} alt="Сына-корзина" />
+			<IconImage src={formIcon} alt="Вам пришло новое сообщение" />
+			<SemiCircle />
 			<Form />
-		</div>
+		</HeaderContainer>
 	);
 }
 

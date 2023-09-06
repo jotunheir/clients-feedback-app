@@ -1,24 +1,26 @@
-.header {
+import { styled } from 'styled-components';
+
+export const HeaderContainer = styled.div`
     display: flex;
     position: relative;
     overflow: hidden;
     min-height: 650px;
-}
+`;
 
-.babyImg {
+export const BackgroundImage = styled.img`
     position: relative;
     width: 50%;
     height: auto;
-}
+`;
 
-.formIcon {
+export const IconImage = styled.img`
     position: absolute;
     z-index: 3;
     top: 436px;
     left: 538px;
-}
+`;
 
-.semiCircle {
+export const SemiCircle = styled.div`
     position: absolute;
     top: 50%;
     left: 45%;
@@ -30,4 +32,4 @@
     border-radius: 100%;
 
     z-index: 1;
-}
+`;

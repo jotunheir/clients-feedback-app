@@ -1,5 +1,13 @@
 import { useSelector } from 'react-redux';
-import styles from './styles.module.css';
+import {
+	Checkbox,
+	CheckboxLabel,
+	CheckboxLabelBold,
+	ErrorActive,
+	ErrorContainer,
+	Rules,
+	RulesCheckbox,
+} from './styled';
 
 function FormCheckbox({
 	name, handleFieldCheckbox, handleFieldFocus, errorMessage,
@@ -9,35 +17,32 @@ function FormCheckbox({
 	);
 
 	return (
-		<div className={styles.rules}>
-			<div className={styles.rulesCheckbox}>
-				<input
+		<Rules>
+			<RulesCheckbox>
+				<Checkbox
 					type="checkbox"
-					className={styles.checkbox}
 					name={name}
 					id="rules"
 					checked={agreeForPersonalDataProcessing.checked}
 					onChange={handleFieldCheckbox}
 					onFocus={handleFieldFocus}
 				/>
-
-				<label className={styles.checkboxLabel} htmlFor="rules">
+				<CheckboxLabel htmlFor="rules">
 					Я согласен(-на) с
 					{' '}
-					<span className={styles.checkboxLabelBold}>правилами</span>
+					<CheckboxLabelBold>правилами</CheckboxLabelBold>
 					{' '}
 					о обработке моих персональных данных
-				</label>
-			</div>
-
+				</CheckboxLabel>
+			</RulesCheckbox>
 			{(agreeForPersonalDataProcessing.isValid) ? (
-				<div className={styles.errorContainer} />
+				<ErrorContainer />
 			) : (
-				<div className={styles.errorActive}>
+				<ErrorActive>
 					{errorMessage}
-				</div>
+				</ErrorActive>
 			)}
-		</div>
+		</Rules>
 	);
 }
 

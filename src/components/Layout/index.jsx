@@ -1,11 +1,12 @@
 import Header from '../Header';
-import styles from './styles.module.css';
+
+import { LayoutContainer } from './styled';
 
 function Layout() {
 	return (
-		<div className={styles.layout}>
+		<LayoutContainer>
 			<Header />
-		</div>
+		</LayoutContainer>
 	);
 }
 
