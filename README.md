@@ -7,7 +7,7 @@
 ## **Technologies**  
 1. React 
 2. Redux Toolkit
-3. CSS-modules
+3. styled-components
 4. Flexbox
   
 ## **Project development**
